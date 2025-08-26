@@ -1,0 +1,40 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'maven-publish'
+}
+apply from: "$rootDir/config/common_apply.gradle"
+
+android {
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = GROUP
+                artifactId = POM_ARTIFACT_ID
+                version = VERSION_NAME
+            }
+        }
+    }
+}
+
+
+dependencies {
+    def dep = rootProject.ext.dependencies
+    implementation dep.stdlib
+    implementation dep.ktx_core
+    implementation dep.appcompat
+    implementation dep.design
+    implementation dep.annotation
+    implementation dep.ktx_livedata
+}

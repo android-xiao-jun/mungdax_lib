@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="monday">ھەپتىنىڭ بىرى</string>
+    <string name="tuesday">ھەپتىنىڭ ئىككىسى</string>
+    <string name="wednesday">ھەپتىنىڭ ئۈچى</string>
+    <string name="thursday">ھەپتىنىڭ تۆتى</string>
+    <string name="friday">ھەپتىنىڭ بەشى</string>
+    <string name="saturday">ھەپتىنىڭ ئالتىسى</string>
+    <string name="sunday">ھەپتىنىڭ يەتتىسى</string>
+    <string name="yesterday">تۈنۈگۈن</string>
+    <string name="just_recently">يېقىندا</string>
+</resources>
