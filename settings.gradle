@@ -26,3 +26,4 @@
 //include ':app'
 //include ':glide-anim'
 include ':utils'
+include ':ucrop'

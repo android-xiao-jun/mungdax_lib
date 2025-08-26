@@ -3,7 +3,7 @@ ext {
     cfg = [
             buildToolsVersion: "30.0.2",
             compileSdk       : 30,
-            minSdk           : 23,
+            minSdk           : 21,
             targetSdk        : 30,
             versionName      : "3.11.1",
             versionCode      : 1216,

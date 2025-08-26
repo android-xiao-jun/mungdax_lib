@@ -87,5 +87,6 @@ dependencies {
 
 
     implementation project(':utils')
+    implementation project(':ucrop')
 
 }
