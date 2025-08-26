@@ -3,3 +3,4 @@ before_install:
 
 install:
   - ./gradlew :utils:publishToMavenLocal
+  - ./gradlew :ucrop:publishToMavenLocal
