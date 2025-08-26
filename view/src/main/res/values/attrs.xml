@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwipeMenuLayoutView">
+        <attr name="leftViewId" format="reference|integer"/>
+        <attr name="rightViewId" format="reference|integer"/>
+        <attr name="contentViewId" format="reference|integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="GradientSeekBar">
+        <attr name="android:maxHeight" format="dimension" />
+        <attr name="roundRadius" format="dimension" />
+        <attr name="thumbWidth" format="dimension" />
+        <attr name="thumbHeight" format="dimension" />
+        <attr name="thumbOffsetY" format="dimension" />
+        <attr name="startColor" format="color" />
+        <attr name="endColor" format="color" />
+        <attr name="progressTextSize" format="dimension" />
+        <attr name="progressTextColor" format="color" />
+        <attr name="progressText" format="boolean" />
+        <attr name="progressPadding" format="dimension" />
+
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="leftMenuView" format="reference" />
+        <attr name="rightMenuView" format="reference" />
+        <attr name="contentView" format="reference" />
+        <attr name="canRightSwipe" format="boolean" />
+        <attr name="canLeftSwipe" format="boolean" />
+        <attr name="fraction" format="float" />
+    </declare-styleable>
+    <declare-styleable name="MarqueeTextView">
+        <attr name="animing" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="View">
+        <attr name="wrapWidth" format="boolean" />
+        <attr name="width" format="dimension" />
+        <attr name="height" format="dimension" />
+        <attr name="marginStart" format="dimension" />
+        <attr name="marginEnd" format="dimension" />
+        <attr name="paddingHorizontalBind" format="dimension" />
+        <attr name="paddingVerticalBind" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MaxRecyclerView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageView">
+        <attr name="videoId" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="IconTextView">
+        <attr name="iconPadding" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RollingTextView">
+        <attr name="duration" format="reference|integer" />
+
+        <!-- Custom implementations of common android text attributes -->
+        <attr name="android:gravity" />
+        <attr name="android:shadowColor" />
+        <attr name="android:shadowDx" />
+        <attr name="android:shadowDy" />
+        <attr name="android:shadowRadius" />
+        <attr name="android:text" />
+        <attr name="android:textAppearance" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:textStyle" />
+    </declare-styleable>
+
+    <declare-styleable name="RadiusCardView">
+        <attr name="topLeftRadius" format="dimension" />
+        <attr name="topRightRadius" format="dimension" />
+        <attr name="bottomRightRadius" format="dimension" />
+        <attr name="bottomLeftRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DrawableSizeTextView">
+        <attr name="drawableWidth" format="dimension" />
+        <attr name="drawableHeight" format="dimension" />
+    </declare-styleable>
+
+    <!-- 圆形进度条 -->
+    <declare-styleable name="CircleProgressView">
+        <attr name="progress" format="float"/>
+        <attr name="progressWidth" format="dimension"/>
+        <attr name="progressColor" format="color"/>
+        <attr name="progressBackgroundColor" format="color"/>
+        <attr name="progressAngelStart" format="integer"/>
+        <attr name="progressAngelEnd" format="integer"/>
+        <attr name="progressDirection" format="integer"/>
+    </declare-styleable>
+
+    <!-- 按照比例显示的 FrameLayout -->
+    <declare-styleable name="RatioFrameLayout">
+        <!-- 宽高比例 -->
+        <attr name="sizeRatio" format="string" />
+    </declare-styleable>
+
+</resources>

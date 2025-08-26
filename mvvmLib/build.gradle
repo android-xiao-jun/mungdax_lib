@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+apply from: "$rootDir/config/common_apply.gradle"
+
+android {
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
+}
+
+dependencies {
+    def dep = rootProject.ext.dependencies
+    implementation project(path: ':utils')
+    implementation project(path: ':view')
+
+    api project(path: ':bigData')
+
+    // androidx 依赖
+    api dep.appcompat
+    api dep.design
+    //rxjava
+    api dep.rxjava2
+    api dep.rxAndroid
+    //rx管理View的生命周期
+    api(dep.rxlifecycle) {
+        exclude group: 'com.android.support'
+    }
+    api(dep["rxlifecycle-components"]) {
+        exclude group: 'com.android.support'
+    }
+    //rxbinding
+    api(dep.rxbinding) {
+        exclude group: 'com.android.support'
+    }
+    //rx权限请求
+    api(dep.rxpermissions) {
+        exclude group: 'com.android.support'
+    }
+    //network
+    api dep.okhttp
+    api dep.retrofit2
+    api dep["retrofit2_gson"]
+    api dep["retrofit2_rx2"]
+    //json解析
+    api dep.gson
+    //glide图片加载库
+    api(dep.glide) {
+        exclude group: 'com.android.support'
+    }
+    //recyclerview的databinding套装
+    api(dep.bindingcollectionadapter) {
+        exclude group: 'com.android.support'
+    }
+    api(dep["bindingcollectionadapter-recyclerview"]) {
+        exclude group: 'com.android.support'
+    }
+    //Google LiveData和ViewModel组件
+    api dep["lifecycle-extensions"]
+    kapt dep["lifecycle-compiler"]
+
+    api 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    api 'com.jeremyliao:live-event-bus-x:1.7.3'
+
+    api project(':Library:logwritelibrary')
+
+}

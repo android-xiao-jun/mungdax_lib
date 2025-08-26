@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_send"
+    android:minWidth="146dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_f5f7fa_r_23">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="11dp"
+        android:text="@string/send_only_one"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:drawablePadding="5dp"
+        android:drawableStart="@mipmap/ic_see_only_one"
+        android:textColor="#438EFF"
+        android:textSize="16sp" />
+
+</RelativeLayout>

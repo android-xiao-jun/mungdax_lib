@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2017 Zhihu Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<resources>
+    <string name="album_name_all">ھەممىسى</string>
+
+    <string name="button_preview">ئالدىن كۆرۈش</string>
+    <string name="button_apply_default">ئىشلىتىش</string>
+    <string name="button_apply">ئىشلىتىش(%1$d)</string>
+    <string name="button_back">قايتىش</string>
+    <string name="photo_grid_capture">رەسىمگە تارتىڭ</string>
+    <string name="empty_text">ھازىرچە رەسىم ياكى سىن يوق</string>
+    <string name="button_ok">مەن كۆرىمەن</string>
+
+    <string name="error_over_count_default">ئەڭ كۆپ تاللاش سانىغا يەتتىڭىز</string>
+    <string name="error_over_count">پەقەت %1$d ھۆججەتنى تاللىغىلى بولىدۇ</string>
+    <string name="error_under_quality">رەسىم سۈپىتى بەك تۆۋەن</string>
+    <string name="error_over_quality">رەسىم سۈپىتى بەك يۇقىرى</string>
+    <string name="error_file_type">قوللىمايدىغان ھۆججەت تىپى</string>
+    <string name="error_type_conflict">رەسىم ۋە سىنلارنى بىرلا ۋاقىتتا تاللاشقا بولمايدۇ</string>
+    <string name="error_no_video_activity">سىن كۆرۈشنى قوللايدىغان ئەپ يوق</string>
+    <string name="error_over_original_size">"该照片大于 %1$d M，无法上传将取消勾选原图"</string>
+    <string name="error_over_original_count">"有 %1$d 张照片大于 %2$d M\n无法上传，将取消勾选原图"</string>
+    <string name="button_original">ئەسلى رەسىم</string>
+    <string name="button_sure_default">ئەلۋەتتە</string>
+    <string name="button_sure">ئەلۋەتتە(%1$d)</string>
+    <plurals name="error_over_count">
+        <item quantity="one">پەقەت بىرلا ھۆججەتنى تاللىغىلى بولىدۇ</item>
+        <item quantity="many">پەقەت %1$d ھۆججەتنى تاللىغىلى بولىدۇ</item>
+    </plurals>
+    <string name="send_only_one">بىرلا قېتىم كۆرۈش</string>
+    <string name="choice">تاللانغان</string>
+</resources>

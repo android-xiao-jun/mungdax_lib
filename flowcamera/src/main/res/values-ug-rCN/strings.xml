@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="take_image_video">رەسىمگە تارتىش ئۈچۈن چېكىڭ ، ئۇزۇن بېسىڭ</string>
+    <string name="take_image">رەسىمگە تارتىش ئۈچۈن چېكىڭ</string>
+    <string name="send">يوللاش</string>
+    <string name="send_only_one">بىرلا قېتىم كۆرۈش</string>
+</resources>

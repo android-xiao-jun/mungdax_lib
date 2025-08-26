@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="keyboard_span">2dip</dimen>
+    <dimen name="default_head_padding">50dip</dimen>
+    <dimen name="default_head_paddings">10dip</dimen>
+
+</resources>

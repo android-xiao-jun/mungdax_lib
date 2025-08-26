@@ -1,0 +1,26 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+apply from: "$rootDir/config/common_apply.gradle"
+apply from: "$rootDir/config/maven_publish.gradle"
+android {
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            jni.srcDirs = []
+        }
+    }
+}
+
+dependencies {
+    def dep = rootProject.ext.dependencies
+    implementation dep.stdlib
+    implementation dep.ktx_core
+    implementation dep.appcompat
+    implementation dep.design
+    implementation dep.annotation
+    implementation dep.constraint_layout
+    implementation dep.ktx_livedata
+}

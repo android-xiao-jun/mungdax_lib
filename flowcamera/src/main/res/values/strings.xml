@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="take_image_video">单击拍照，长按摄像</string>
+    <string name="take_image">单击拍照</string>
+    <string name="send">发送</string>
+    <string name="send_only_one">仅看一次</string>
+</resources>

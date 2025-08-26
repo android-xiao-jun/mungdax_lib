@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright 2017 Zhihu Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?colorPrimary"
+        android:elevation="4dp"
+        android:theme="?toolbar"
+        app:navigationIcon="@drawable/icon_close_black"
+        tools:targetApi="lollipop">
+
+        <TextView
+            android:id="@+id/selected_album"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="center"
+            android:drawableRight="@drawable/icon_combo"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:textColor="?attr/album.element.color"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/button_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:foreground="?selectableItemBackground"
+                android:padding="16dp"
+                android:text="@string/button_preview"
+                android:textColor="?attr/bottomToolbar.preview.textColor"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/originalLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:visibility="visible"
+                tools:showIn="@layout/activity_matisse">
+
+
+                <com.zhihu.matisse.internal.ui.widget.CheckRadioView
+                    android:id="@+id/original"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_radio_unselected" />
+
+                <TextView
+                    android:id="@+id/tv_origin_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:enabled="true"
+                    android:paddingStart="4dp"
+                    android:paddingLeft="4dp"
+                    android:text="@string/button_original"
+                    android:textColor="?attr/bottomToolbar.preview.textColor"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/bottomToolbar.bg"
+        android:elevation="4dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        tools:targetApi="lollipop">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/shape_f5f7fa_r_23"
+            android:minWidth="146dp">
+
+
+            <TextView
+                android:id="@+id/tv_button_apply_only_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="11dp"
+                android:drawableStart="@drawable/ic_see_only_one"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/send_only_one"
+                android:textColor="#333333"
+                android:drawableTint="#333333"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/button_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="14dp"
+            android:background="@drawable/shape_438eff_r_23"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:minWidth="146dp"
+            tools:text="send"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_toolbar"
+        android:layout_below="@id/toolbar"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_toolbar"
+        android:layout_below="@id/toolbar"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/empty_view_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="?attr/album.emptyView"
+            android:drawablePadding="8dp"
+            android:gravity="center"
+            android:text="@string/empty_text"
+            android:textColor="?attr/album.emptyView.textColor"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+</RelativeLayout>

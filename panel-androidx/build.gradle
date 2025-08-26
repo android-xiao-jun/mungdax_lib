@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+apply from: "$rootDir/config/common_apply.gradle"
+
+dependencies {
+    def dep = rootProject.ext.dependencies
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation dep.stdlib
+    implementation dep.annotation
+    implementation dep.ktx_core
+    implementation dep.appcompat
+}

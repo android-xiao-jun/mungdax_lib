@@ -1,0 +1,34 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+apply from: "$rootDir/config/common_apply.gradle"
+apply from: "$rootDir/config/maven_publish.gradle"
+
+dependencies {
+    def dep = rootProject.ext.dependencies
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    // CameraX core library
+    def camerax_version = "1.0.0-alpha08"
+    // CameraX view library
+    def camerax_view_version = "1.0.0-alpha05"
+    api "androidx.camera:camera-core:$camerax_version"
+    // If you want to use Camera2 extensions
+    api "androidx.camera:camera-camera2:$camerax_version"
+    // If you to use the Camera View class
+    api "androidx.camera:camera-view:$camerax_view_version"
+
+    compileOnly(dep.glide)
+    // PhotoView
+    api 'com.github.chrisbanes:PhotoView:2.3.0'
+    // custom camera view
+    api 'com.otaliastudios:cameraview:2.6.0'
+
+    implementation dep.appcompat
+    implementation dep.design
+    implementation dep.constraint_layout
+    implementation dep.annotation
+
+    implementation "androidx.exifinterface:exifinterface:1.3.2"
+}

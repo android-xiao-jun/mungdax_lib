@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="TopUpDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/popup_down_in</item>
+        <item name="android:windowExitAnimation">@anim/popup_down_out</item>
+    </style>
+
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
+    <style name="MyProgressDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">#00000000</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="dialog_anim_in_bottom">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim_bottom</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim_bottom</item>
+    </style>
+
+    <style name="dialog_anim_in_top">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim_top</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim_top</item>
+    </style>
+
+    <style name="dialog_anim_in_center">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim_center</item>
+        <!-- 指定显示的动画xml -->
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim_center</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+    <!--弹窗动画-->
+
+    <style name="base_dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 后面的activity变暗 -->
+    </style>
+
+    <style name="AppTheme.Trans" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">#00ffffff</item>
+    </style>
+
+    <style name="AppTheme.Day.Trans" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">#00ffffff</item>
+    </style>
+
+</resources>

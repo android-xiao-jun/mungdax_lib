@@ -1,0 +1,21 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+apply from: "$rootDir/config/common_apply.gradle"
+
+dependencies {
+    def dep = rootProject.ext.dependencies
+    implementation project(path: ':utils')
+
+    implementation dep.stdlib
+    implementation dep.ktx_core
+    implementation dep.appcompat
+    implementation dep.design
+    testImplementation dep.junit4
+    androidTestImplementation dep.android_test
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    api 'com.jeremyliao:live-event-bus-x:1.7.3'
+}
