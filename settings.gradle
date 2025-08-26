@@ -27,3 +27,4 @@
 //include ':glide-anim'
 include ':utils'
 include ':ucrop'
+include ':search'

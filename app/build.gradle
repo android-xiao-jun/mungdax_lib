@@ -86,7 +86,10 @@ dependencies {
     implementation 'com.github.yyued:SVGAPlayer-Android:2.6.1'
 
 
-    implementation project(':utils')
-    implementation project(':ucrop')
+//    implementation project(':utils')
+//    implementation project(':ucrop')
+
+    implementation 'com.github.android-xiao-jun.mungdax_lib:ucrop:1.0.0'
+    implementation 'com.github.android-xiao-jun.mungdax_lib:utils:1.0.0'
 
 }

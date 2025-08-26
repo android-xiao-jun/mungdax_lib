@@ -2,31 +2,9 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'maven-publish'
 }
 apply from: "$rootDir/config/common_apply.gradle"
-
-android {
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
-}
-
-
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = GROUP
-                artifactId = POM_ARTIFACT_ID
-                version = VERSION_NAME
-            }
-        }
-    }
-}
+apply from: "$rootDir/config/maven_publish.gradle"
 
 
 dependencies {
