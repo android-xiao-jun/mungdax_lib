@@ -23,7 +23,7 @@
 //    }
 //}
 
-include ':app'
+//include ':app'
 //include ':glide-anim'
 include ':utils'
 include ':ucrop'
@@ -31,6 +31,8 @@ include ':search'
 include ':barmak-asrsdk'
 include ':database'
 include ':ffmpeg'
+include ':musicPlayer'
+include ':panel-androidx'
 include ':Library:logwritelibrary'
 include ':Library:SudMGPWrapper'
 //include ':flowcamera'

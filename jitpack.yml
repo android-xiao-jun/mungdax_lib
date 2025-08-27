@@ -13,3 +13,5 @@ install:
   - ./gradlew :ffmpeg:publishToMavenLocal
   - ./gradlew :Library:logwritelibrary:publishToMavenLocal
   - ./gradlew :Library:SudMGPWrapper:publishToMavenLocal
+  - ./gradlew :musicPlayer:publishToMavenLocal
+  - ./gradlew :panel-androidx:publishToMavenLocal

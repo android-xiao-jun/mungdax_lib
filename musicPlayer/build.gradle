@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
 }
 apply from: "$rootDir/config/common_apply.gradle"
+apply from: "$rootDir/config/maven_publish.gradle"
 
 dependencies {
     def dep = rootProject.ext.dependencies
@@ -11,9 +12,6 @@ dependencies {
     implementation dep.ktx_core
     implementation dep.appcompat
     implementation dep.design
-    testImplementation dep.junit4
-    androidTestImplementation dep.android_test
-    androidTestImplementation dep.espresso
 
     implementation project(path: ':utils')
 }

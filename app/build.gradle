@@ -92,5 +92,10 @@ dependencies {
     implementation 'com.github.android-xiao-jun.mungdax_lib:ucrop:1.0.0'
     implementation 'com.github.android-xiao-jun.mungdax_lib:utils:1.0.0'
     implementation 'com.github.android-xiao-jun.mungdax_lib:search:1.0.0'
+    implementation 'com.github.android-xiao-jun.mungdax_lib:ffmpeg:1.0.0'
+    implementation 'com.github.android-xiao-jun.mungdax_lib:barmak-asrsdk:1.0.0'
+    implementation 'com.github.android-xiao-jun.mungdax_lib:logwritelibrary:1.0.0'
+    implementation 'com.github.android-xiao-jun.mungdax_lib:database:1.0.0'
+    implementation 'com.github.android-xiao-jun.mungdax_lib:SudMGPWrapper:1.0.0'
 
 }

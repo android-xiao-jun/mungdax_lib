@@ -4,6 +4,7 @@ plugins {
 }
 
 apply from: "$rootDir/config/common_apply.gradle"
+apply from: "$rootDir/config/maven_publish.gradle"
 
 dependencies {
     def dep = rootProject.ext.dependencies
