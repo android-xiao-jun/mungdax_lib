@@ -7,7 +7,7 @@ object ActivityExtension {
      * 统一处理允许录屏和非录屏 控制字段
      */
     @JvmField
-    public val OPEN_RECORD = BuildConfig.DEBUG
+    public var OPEN_RECORD = BuildConfig.DEBUG
 }
 
 inline fun <reified T> Activity.intentData(key: String) = lazy {
