@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.graphics.Rect
 import android.os.Build
 import android.os.Environment
+import android.util.DisplayMetrics
 import android.view.*
 import android.widget.FrameLayout
 import androidx.annotation.ColorInt
@@ -273,6 +274,10 @@ object StatusBarUtils {
         return statusBarHeight
     }
 
+    fun getWebViewStatusBarHeight():Int{
+        return (getStatusBarHeight()/Utils.getApp().resources.displayMetrics.density).toInt()
+    }
+
     fun getNavBarHeight(): Int {
         val res = Utils.getApp().resources
         val resourceId = res.getIdentifier("navigation_bar_height", "dimen", "android")
@@ -413,4 +418,5 @@ object StatusBarUtils {
             BarConfig.getNavigationBarHeightInternal(context)
         }
     }
+
 }
