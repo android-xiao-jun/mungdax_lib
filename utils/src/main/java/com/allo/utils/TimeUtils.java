@@ -303,6 +303,18 @@ public class TimeUtils {
     }
 
     /**
+     * 从时间戳中返回时间
+     *
+     * @param timetamp
+     * @return
+     */
+    public static int getHourOfDayFromTimestamp2(final long timetamp) {
+        final Calendar c = Calendar.getInstance(TimeZone.getTimeZone("Asia/Shanghai"));
+        c.setTimeInMillis(timetamp);
+        return c.get(Calendar.HOUR_OF_DAY);
+    }
+
+    /**
      * 判断是否过期
      *
      * @param expiresAt 结束时间
