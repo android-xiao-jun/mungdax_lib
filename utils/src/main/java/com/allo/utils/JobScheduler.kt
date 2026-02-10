@@ -27,4 +27,9 @@ object JobScheduler {
     fun uiJobDelay(runnable: Runnable, delayMillis: Long) {
         mUIHandler.postDelayed(runnable, delayMillis)
     }
+
+    fun cancelJobDelay(runnable: Runnable) {
+        mUIHandler.removeCallbacks(runnable)
+    }
+
 }
