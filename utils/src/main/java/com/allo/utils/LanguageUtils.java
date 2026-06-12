@@ -1,5 +1,6 @@
 package com.allo.utils;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
@@ -19,6 +20,26 @@ public class LanguageUtils {
     private static final String KEY_LOCALE          = "KEY_LOCALE";
     private static final String VALUE_FOLLOW_SYSTEM = "VALUE_FOLLOW_SYSTEM";
     public static final String KEY_FIRST_LANGUAGE   = "first_language";
+
+    @SuppressLint("StaticFieldLeak")
+    private static Context context;
+
+    /**
+     * Init LanguageUtils.
+     * <p>Called automatically by {@link SPUtilsProvider},
+     * or can be called manually in Application.onCreate().</p>
+     *
+     * @param app The Application object.
+     */
+    public static void init(Context app) {
+        context = app;
+    }
+    private static Context getContext(){
+        if (context == null){
+            context = Utils.getApp();
+        }
+        return context;
+    }
 
     private LanguageUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
@@ -159,7 +180,7 @@ public class LanguageUtils {
      * @return the locale of applicationContext
      */
     public static Locale getAppContextLanguage() {
-        return getContextLanguage(Utils.getApp());
+        return getContextLanguage(getContext());
     }
 
     /**
@@ -182,13 +203,13 @@ public class LanguageUtils {
     }
 
     static void pollCheckAppContextLocal(final Locale destLocale, final int index, final Utils.Consumer<Boolean> consumer) {
-        Resources appResources = Utils.getApp().getResources();
+        Resources appResources = getContext().getResources();
         Configuration appConfig = appResources.getConfiguration();
         Locale appLocal = getLocal(appConfig);
 
         setLocal(appConfig, destLocale);
 
-        Utils.getApp().getResources().updateConfiguration(appConfig, appResources.getDisplayMetrics());
+        getContext().getResources().updateConfiguration(appConfig, appResources.getDisplayMetrics());
 
         if (consumer == null) return;
 
@@ -277,7 +298,7 @@ public class LanguageUtils {
         if (destLocal == null) return;
 
         updateConfiguration(activity, destLocal);
-        updateConfiguration(Utils.getApp(), destLocal);
+        updateConfiguration(getContext(), destLocal);
     }
 
     private static void updateConfiguration(Context context, Locale destLocal) {

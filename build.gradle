@@ -2,7 +2,7 @@ apply from: "$rootDir/config/config.gradle"
 
 buildscript {
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath 'com.android.tools.build:gradle:7.0.0'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
 //        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21"

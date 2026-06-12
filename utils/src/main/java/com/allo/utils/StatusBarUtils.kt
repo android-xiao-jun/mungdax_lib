@@ -193,7 +193,8 @@ object StatusBarUtils {
 
             window.decorView.systemUiVisibility = window.decorView.systemUiVisibility or View.SYSTEM_UI_FLAG_VISIBLE
 
-            val contentView = window.findViewById<View>(Window.ID_ANDROID_CONTENT) as ViewGroup
+            //fix #31282 java.lang.NullPointerException
+            val contentView = window.findViewById<View>(Window.ID_ANDROID_CONTENT) as? ViewGroup?:return
             val firstChild = contentView.getChildAt(0)
             if (firstChild != null) {
                 ViewCompat.setFitsSystemWindows(firstChild, false)
@@ -279,13 +280,16 @@ object StatusBarUtils {
     }
 
     fun getNavBarHeight(): Int {
-        val res = Utils.getApp().resources
-        val resourceId = res.getIdentifier("navigation_bar_height", "dimen", "android")
-        return if (resourceId != 0) {
-            res.getDimensionPixelSize(resourceId)
-        } else {
-            0
-        }
+        //fix #11201 android.content.res.Resources$NotFoundException
+        return kotlin.runCatching {
+            val res = Utils.getApp().resources
+            val resourceId = res.getIdentifier("navigation_bar_height", "dimen", "android")
+            if (resourceId != 0) {
+                res.getDimensionPixelSize(resourceId)
+            } else {
+                0
+            }
+        }.getOrNull()?:0
     }
 
     fun getStatusBarHeightFixResource(): Int {

@@ -2,4 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.allo.utils">
 
+    <application>
+
+        <provider
+            android:name="com.allo.utils.SPUtilsProvider"
+            android:authorities="${applicationId}.sp.utils.provider"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
 </manifest>

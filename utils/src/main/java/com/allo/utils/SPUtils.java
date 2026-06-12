@@ -14,8 +14,28 @@ import java.util.Set;
 @SuppressLint("ApplySharedPref")
 public class SPUtils {
     private static final Map<String, SPUtils> SP_UTILS_MAP = new ArrayMap<>();
+    @SuppressLint("StaticFieldLeak")
+    private static Context context;
 
     private final SharedPreferences sp;
+
+    /**
+     * Init SPUtils.
+     * <p>Called automatically by {@link SPUtilsProvider},
+     * or can be called manually in Application.onCreate().</p>
+     *
+     * @param app The Application object.
+     */
+    public static void init(Context app) {
+        context = app;
+    }
+
+    private static Context getContext(){
+        if (context == null) {
+            context = Utils.getApp();
+        }
+        return context;
+    }
 
     /**
      * Return the single {@link SPUtils} instance
@@ -73,8 +93,7 @@ public class SPUtils {
     }
 
     private SPUtils(final String spName, final int mode) {
-        sp = Utils.getApp().getSharedPreferences(spName, mode);
-
+        sp = getContext().getSharedPreferences(spName, mode);
     }
 
     /**
